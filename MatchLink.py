@@ -11,20 +11,20 @@ mismatch = False
 a = array("i",[])
 
 #compare the lengths of 2 links
-if(len(link1) == len(link2)):
+if len(link1) == len(link2):
     length = len(link1)
 
     #compare each element in 2 links
     for i in range(0,len(link1)):
-        if(link1[i] == link2[i]):
+        if link1[i] == link2[i]:
             counter = counter+1
         else:
             match = False
             a.append(i)
-    if(counter == length):
+    if counter == length:
         match = True
     #output if success
-    if(match):
+    if match:
         print("Two links does match")
 
     #output if unsuccess
@@ -38,11 +38,11 @@ if(len(link1) == len(link2)):
         for i in range(0,length):
             mismatch = False
             for j in range(0, len(a)):
-                if(i == a[j]):
+                if i == a[j]:
                     print('_', end="")
                     mismatch = True
                     break
-            if(mismatch):
+            if mismatch:
                 continue
             print(link1[i], end="")
 
